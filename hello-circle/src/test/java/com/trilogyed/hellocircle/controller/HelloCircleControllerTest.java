@@ -23,11 +23,11 @@ public class HelloCircleControllerTest {
     @Test
     public void shouldReturnHello() throws Exception {
         // arrange and act
-        mockMvc.perform(get("/hello"))
+        mockMvc.perform(get("/answer"))
                 .andDo(print())
                 .andExpect(status().isOk())
 
         // assert
-                .andExpect(content().string("Hello, Circle!"));
+                .andExpect(content().string("The answer is 42!"));
     }
 }
